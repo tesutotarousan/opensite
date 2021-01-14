@@ -64,6 +64,14 @@ main .last p {
   font-family: 'Potta One', cursive;
   font-size: 10rem;
 }
+main #onepoint {
+  color: #FFF;
+  background-color: #3A3;
+  padding: 2rem;
+}
+main #onepoint p {
+  padding: 0;
+}
 /* main */
 
 
