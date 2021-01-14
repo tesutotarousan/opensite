@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>DEMO</title>
   
   <!-- googlefont -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   
   <!-- fontawesome -->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
@@ -18,103 +20,117 @@
 <body>
 
   <header>
-    <h1>GitHub pagesで性的なサイトを公開するやり方！！</h1>
+    <h1>GitHub pagesで<br>性的なサイトを公開するやり方！！</h1>
   </header>
 
   <main>
     <div class="box">
-      <h1>このページにはなーに？</h1>
-      <p>このページではGitHubというサイトのGitHub pagesというサービスを利用して無料で静的なサイトを公開する手順を解説します。</p>
-      <p>※Windows10でやったのでMacだと画面が少し違うかも。だいたい一緒だと思います。</p>
-      <p>※ここでの静的なサイトとはHTML/CSS、Javascriptのみを使用して作成したページの事を指します。</p>
+<!--      <h1>このページはなーに？</h1>-->
+      <p>このページではGitHubというサイトのGitHub pagesというサービスを利用し、無料で静的なサイトを公開する手順を解説する。</p>
+      <p>※Windows10でやったのでMacだと画面が少し違うかも。だいたい一緒だと思うけど。</p>
+      <p>※ここでの静的なサイトとはHTML/CSS、Javascriptのみを使用して作成したページの事。</p>
       <p>※PHPなどの動作は多分できないと思います（多分）。</p>
     </div>
-    <div class="box">
+    <div id="step0" cclass="box">
       <h1>用意するもの</h1>
-      <p>必要なものは以下の２つです。</p>
+      <p>事前に必要なものは以下の２つ。</p>
       <p>・メールアドレス</p>
-      <p>・公開するHTML</p>
+      <p>・公開するHTML/CSSなどのファイル</p>
     </div>
-    <div class="box">
+    <div id="step1" class="box">
       <h1>手順１</h1>
       <h2>GitHubのアカウントを作成する</h2>
       <p>まずはGitHubを使うためのアカウントを作成しましょう。</p>
-      <p>※すでにGitHubアカウントを所有している場合は次の手順まで飛ばしてOK⇒<button>スキップ！</button></p>
-      <p>こちらのボタンか下記のURLからGitHubのアカウント新規作成画面を開いてください→<a href="https://github.com/join">GitHubアカウント新規作成</a></p>
-      <p>https://github.com/join</p>
+      <p>※すでにGitHubアカウントを所有している場合は次の手順まで飛ばしてOK⇒<a href="#step2">手順２へ</a>
+      <p>下記のボタンかURLからGitHubのアカウント新規作成画面を開いてください</p>
+      <p>　⇒　<a href="https://github.com/join">GitHubアカウント新規作成</a></p>
+      <p>　⇒　https://github.com/join</p>
       <img src="img/githubpages_1.png" alt="">
       <img src="img/githubpages_2.png" alt="">
-      <p>Username、Email address、Passwordを入力し、ロボットじゃないですチェックをクリアしたら下にある「Create account」を押してアカウントを作成しましょう。</p>
-      <p>Usernameは自由に登録してOKですが、後で後悔するURLの一部に含まれるので恥ずかしすぎない名前にしましょうね。</p>
+      <p>Username、Email address、Passwordを入力する。</p>
+      <p>ロボットじゃないですチェックをクリアする。</p>
+      <p>できたら下にある「Create account」を押してアカウントを作成する。</p>
+      <p>Usernameは自由に登録してOKだけど、後で公開するURLの一部に含まれるので恥ずかしすぎない名前にしましょうね。</p>
       <img src="img/githubpages_3.png" alt="">
       <p>上のような画面になったらOK。</p>
-      <p>アカウントは作成されましたが、今の状態ではまだメール確認が終わっていないため作業が進められません。</p>
-      <p>アカウント作成時に登録したメールアドレスを確認しましょう。</p>
-      <p>Githubから確認メールが届いているハズなので、そのメールを開いて「Verify email address」を押します。</p>
+      <p>これでGitHubのアカウントが作成されました。</p>
+      <p>けど今の状態ではまだメール確認が終わっていないためこの後の作業が進められない。</p>
+      <p>アカウント作成時に登録したメールアドレスを確認してください。</p>
+      <p>Githubから確認メールが届いているハズなので、そのメールを開いて「Verify email address」を押す。</p>
       <img src="img/githubpages_4.png" alt="">
-      <p>上のような画面が開いたら確認完了です。</p>
+      <p>上のような画面が開いたらメール確認完了。</p>
+      <p>次の手順に進む</p>
       <img src="img/githubpages_5.png" alt="">
     </div>
-    <div class="box">
+    <div id="step2" class="box">
       <h1>手順２</h1>
       <h2>GitHubのリポジトリを作成する</h2>
-      <p>GitHubアカウントの用意ができたので、まずはリポジトリを作成しましょう。</p>
-      <p>画面真ん中左くらいにある「Create a repository」を押して新規作成です。</p>
+      <p>GitHubアカウントの用意ができたので、まずはリポジトリを作成する。</p>
+      <div id="onepoint">
+        <h3>リポジトリとは？</h3>
+        <p>Web上でデータを保管する場所みたいな感じの所。</p>
+        <p>今回の場合はWeb上で公開するサイトのファイルを置く場所という認識でOK。</p>
+      </div>
+      <p>画面真ん中左くらいにある「Create a repository」を押してリポジトリを新規作成する。</p>
       <img src="img/githubpages_5_1.png" alt="">
-      <p>下の画像のようなリポジトリの新規作成画面が開くと思います。</p>
-      <p>Repository nameだけ入力すればOKです。</p>
-      <p>Repository nameもUser nameと同じく後で公開するページのURLに含まれるため、適度な恥ずかしさの名前にしましょう。</p>
-      <p>真ん中らへんにあるPublic/Privateのラジオボタンは初期表示のままPublicを選択します。</p>
+      <p>下の画像のようなリポジトリの新規作成画面が開くので必要な項目を入力する。</p>
+      <p>基本的にはRepository nameだけ入力すればOK。</p>
+      <p>※Repository nameもUsernameと同じく後で公開するページのURLに含まれるため、恥ずかしすぎない名前にしましょうね。</p>
+      <p>真ん中らへんにあるPublic/Privateのラジオボタンは初期表示のままPublicを選択する。</p>
       <p>Privateにしてしまうとページが公開できなくなるので注意。</p>
-      <p>Repository nameの入力が終わったら下にある「Create repository」を押します。</p>
+      <p>Repository nameの入力が終わったら下にある「Create repository」を押す。</p>
       <img src="img/githubpages_6_1.png" alt="">
-      <p>下の画像のような画面が表示されたらリポジトリの作成成功です。</p>
-      <p>この画面が作成したリポジトリの管理画面になります。</p>
+      <p>下の画像のような画面が表示されたらリポジトリの作成成功。</p>
+      <p>この画面が作成したリポジトリの管理画面になる。</p>
       <img src="img/githubpages_7.png" alt="">
+      <p>公開リポジトリができたので次の手順に進む。</p>
     </div>
-    <div class="box">
+    <div id="step3" class="box">
       <h1>手順３</h1>
       <h2>リポジトリにファイルをアップロードする</h2>
-      <p>リポジトリの作成ができたので、公開するページのファイルをアップロードします。</p>
-      <p>管理画面の真ん中の少ししたにある「uploading an existring file.」というリンクを押してファイルをアップロードする画面に行きます。</p>
-      <p>文字が小さいので良く探しましょう。</p>
-      <p>知覚に表示されている「Try out Github Discussions!」のところは無視しても良いし「Got it!」を押して消しても良いです。</p>
+      <p>リポジトリの作成ができたので、公開するページのファイルをリポジトリにアップロードする。</p>
+      <p>管理画面の真ん中の少し下にある「uploading an existring file.」というリンクを押してファイルをアップロードするための画面に移動する。</p>
+      <p>※リンクの文字が小さいので良く探そう。</p>
+      <p>知覚に表示されている「Try out Github Discussions!」のところは無視しても良いし「Got it!」を押して消しても良い。</p>
       <img src="img/githubpages_7_1.png" alt="">
-      <p>アップロードしたいファイルを選択してドラッグし、画面の真ん中にでている「Drag files here to add them to your repository」と書いてある所にファイルを投げ込みます。</p>
-      <p>圧縮などはしなくてOK。サイトの中身を丸ごと投入します。</p>
-      <img class="lt" src="img/githubpages_9.png" alt="">
+      <p>アップロードしたいファイルを選択してドラッグし、画面の真ん中にでている「Drag files here to add them to your repository」と書いてある所らへんに投げ込む。</p>
+      <p>圧縮などはしなくてOK。サイトの中身を丸ごと投入で良い。</p>
+      <img src="img/githubpages_9.png" alt="">
       <img src="img/githubpages_8.png" alt="">
-      <p>上手に放り込めたら「Commit changes」を押してアップロードを実行しましょう。</p>
-      <p>※間違えて投げ込んでしまったファイルなどは、ファイル名の右側に表示される「×」のボタンで削除できます。</p>
+      <p>上手に放り込めたら「Commit changes」を押してアップロードを実行する。</p>
+      <p>※間違えて投げ込んでしまったファイルなどは、ファイル名の右側に表示される「×」のボタンで削除できる。</p>
       <img src="img/githubpages_10.png" alt="">
-      <p>上のような画面が表示されたらアップロード成功です。</p>
-      <p>※アップロードしたファイルによって微妙に違うのでだいたいこんな画面。</p>
+      <p>上のような画面が表示されたらアップロード成功。</p>
+      <p>※アップロードしたファイルによって微妙に違うので、だいたいこんな画面って感じで。</p>
+      <p>ここまでで公開リポジトリにサイトのファイルがアップロードされた。</p>
+      <p>次で最後の手順です。</p>
     </div>
-    <div class="box">
+    <div id="step4" class="box">
       <h1>手順４</h1>
       <h2>GitHub pagesを設定してアップロードしたファイルを公開する</h2>
-      <p>ファイルのアップロードができたら、いよいよページを公開する設定を行いましょう。</p>
-      <p>リポジトリの管理画面の右側にあるSettingsを押して設定画面に移行します。</p>
+      <p>ファイルのアップロードができたので、最後にそのページを公開するための設定をする。</p>
+      <p>まずはリポジトリの管理画面の右側にあるSettingsを押して設定画面に移行する。</p>
       <img src="img/githubpages_11.png" alt="">
-      <p>設定画面を下にスクロールしていき、GitHub Pagesを探します。</p>
+      <p>設定画面を下にスクロールしていき、GitHub Pagesを探してください。</p>
       <p>※けっこう下の方です。</p>
       <img src="img/githubpages_12.png" alt="">
       <img src="img/githubpages_13.png" alt="">
-      <p>GitHub pagesを見つけたら、その中のSourceを編集します。</p>
-      <p>Noneとなっているプルダウンのボタンを押して、mainを選択してください。</p>
+      <p>GitHub pagesを見つけたら、その中のSourceを編集する。</p>
+      <p>Noneとなっているプルダウンのボタンを押して、mainを選択する。</p>
       <img src="img/githubpages_13_1.png" alt="">
       <img src="img/githubpages_13_2.png" alt="">
-      <p>Soureceを編集するとSaveボタンが表示されるので、押します。</p>
+      <p>Soureceを編集するとSaveボタンが表示されるので、それを押す。</p>
       <img src="img/githubpages_13_3.png" alt="">
-      <p>設定が保存され、設定画面が更新されます。</p>
+      <p>設定が保存され、設定画面が更新される。</p>
       <p>もう一回下までスクロールしてGitHub pagesの設定が変更されているのを確認してください。</p>
       <img src="img/githubpages_14.png" alt="">
       <img src="img/githubpages_15.png" alt="">
-      <p>設定が更新されていたら準備OK！</p>
-      <p>「Your site is ready to be published at ~~~」と表示されていると思います。</p>
-      <p>「~~~」の所があなたのページのURLになっています。</p>
+      <p>設定が更新されていたら準備はOK。</p>
+      <p>GitHub pagesの下らへんに「Your site is ready to be published at ~~~」と表示されていると思います。</p>
+      <p>「~~~」の所が公開されたページのURLになっている。</p>
       <img src="img/githubpages_15_1.png" alt="">
       <p>開いてみましょう！</p>
+      <p>アップロードしたページがWeb上で見えるようになっているハズ。</p>
     </div>
     <div class="last">
       <p>終わり！</p>
