@@ -30,6 +30,9 @@ main img {
 main img.lt {
   width: 50%;
 }
+main .last p {
+  font-size: 10rem;
+}
 /* main */
 
 
