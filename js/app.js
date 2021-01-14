@@ -27,5 +27,10 @@ $(function () {
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     return false;
   });
+  
+  //img拡大
+  $('main div img').on('click', function () {
+      $(this).toggleClass('show');
+  });
 
 });
