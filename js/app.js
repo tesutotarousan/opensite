@@ -10,7 +10,7 @@ $(function () {
   });
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 200) {
-      pageTop.css("bottom", "30px");
+      pageTop.css("bottom", "20px");
     } else {
       pageTop.css("bottom", "-85px");
     }
