@@ -1,7 +1,9 @@
 :root {
+/*
   --red: #f06;
   --green: #3A3;
   --st_green: #1A1;
+*/
   --red: #f90;
   --green: #55ACEE;
   --st_green: #11ACAA;
@@ -17,95 +19,52 @@ body {
   font-family: 'Potta One', cursive;
 }
 
+/* header_wrapper*/
+.header_wrapper {
+  background: var(--green);
+}
 /* header */
 header {
   background-color: var(--green);
   text-align: center;
 }
+header a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
 /* header */
+
+/* nav */
+nav {
+  position: sticky;
+  top: 0;
+  background: var(--green);
+}
+nav ul {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+}
+nav ul li {
+  list-style-type: none;
+  text-align: center;
+  flex: auto;
+}
+nav ul li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background: var(--red);
+}
+/* nav */
 
 /* main */
 main {
   max-width: 1000px;
   margin: auto;
-}
-main div {
-  margin: 2rem auto;
-}
-main div h1 {
-  padding-left: 1rem;
-  border-bottom: 2rem solid  var(--green);
-}
-main div h2 {
-  padding-left: 2rem;
-  border-bottom: 1rem solid  var(--green);
-}
-main div p {
-  font-family: 'Noto Sans JP', sans-serif;
-  padding: 1rem 3rem;
-  text-indent: 1rem;
-}
-main div b {
-  text-decoration: underline 3px var(--red);
-}
-main div ul {
-  font-family: 'Noto Sans JP', sans-serif;
-  padding: 0 4rem;
-}
-main div .link_list {
-  margin-top: 0;
-  padding: 0;
-}
-main div .link_list p {
-  margin: 0;
-  padding: 0;
-}
-main div.notes {
-  margin-top: 0;
-}
-main div.notes p {
-  font-size: 18px;
-  padding: 0 3rem;
-}
-main div blockquote {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--green);
-  background-color: #FFF;
-  padding: 1rem;
-  border-left: 20px solid var(--red);
-}
-main img {
-  display: block;
-  border: 1px solid #000;
-  width: 50%;
-  margin: auto;
-  box-sizing: border-box;
-  transition: .3s;
-}
-main img.show {
-  width: 100%;
-}
-main img.lt {
-  width: 50%;
-}
-main div.box button {
-  font-size: 20px;
-  font-family: 'Potta One', cursive;
-}
-main .last p {
-  text-align: center;
-  font-family: 'Potta One', cursive;
-  font-size: 10rem;
-}
-main #onepoint {
-  color: #FFF;
-  background-color: var(--green);
-  padding: 2rem;
-}
-main #onepoint p {
-  padding: 0;
 }
 /* main */
 
@@ -145,22 +104,5 @@ footer {
 
 
 @media screen and (max-width: 767px) {
-  main div h1 {
-    padding-left: 0;
-    text-align: center;
-  }
-  main div h2 {
-    padding-left: auto;
-  }
-  main div p {
-    font-family: 'Noto Sans JP', sans-serif;
-    padding: 1rem 0;
-    text-indent: unset;
-  }
-  main div.notes p {
-    padding: 0 1rem;
-  }
-  main img {
-    width: 100%;
-  }
+
 }
