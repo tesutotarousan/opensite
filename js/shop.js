@@ -6,7 +6,7 @@ $('input').change(function() {
 
   // ボタンの分だけループで一括処理
   // ボタンの親要素を対象にして金額の合計を計算する
-  $('input').each(function(index, elm){
+  $('input[type="number"]').each(function(index, elm){
 
     // 計算対象
     $dl = $(this).parent().parent();
