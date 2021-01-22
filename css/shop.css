@@ -31,24 +31,44 @@ a:hover {
   background: #f06;
 }
 
-
+/* main */
+main {
+  position: relative;
+  overflow-x: hidden;
+  margin: 1rem 1rem;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  max-width: 800px;
+}
 
 /* box共通 */
 section {
   border: 1px solid #000;
-  margin: 1rem;
+/*  margin: 1rem;*/
   padding: 1rem;
   background: #fff;
+}
+/* box1 */
+#box1 input[type="number"] {
+  width: 50px;
+}
+#box1 dl dt {
+/*  border-bottom: 1px solid #000;*/
+}
+#box1 dl dd {
+  margin-left: 10px;
 }
 
 /* box2 */
 #box2 {
   position: absolute;
-  transition: .3s;
-  left: -100%;
+  transition: .5s;
+  top: 0;
+  right: -100%;
+/*  margin: 0 1rem;*/
 }
 #box2.open {
-  left: 0;
+  right: 0;
 }
 #box2 p {
   margin: 0;
@@ -59,4 +79,8 @@ section {
 }
 #box2 p.open {
   height: 20px;
+}
+#box2 input[type="submit"] {
+  width: 100%;
+  margin-top: 1rem;
 }
