@@ -64,14 +64,17 @@ main #box1 a:hover {
   color: #f06;
   background: #fff;
 }
-main #box2 img {
+main #testbox p {
+  text-align: center;
+}
+main #testbox img {
   width: 100px;
 }
 
 /* ローディング画面 */
 #loading {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   transition: all 1s;
   background-color: #fff;
@@ -111,25 +114,25 @@ main #box2 img {
   z-index: 9999;
   pointer-events: none;
   right: 0;
-  -webkit-transition: top 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: top 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #page-animate::after {
   content: '';
   position: fixed;
-  bottom: 100%;
+  top: 100%;
   width: 100%;
   height: 100%;
-  background-color: #f06;
+  background-color: #fff;
   z-index: 9999;
   pointer-events: none;
-  left: 0;
-  -webkit-transition: bottom 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: bottom 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  right: 0;
+  -webkit-transition: top 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: top 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #page-animate.is-slide-in::before {
   top: 0;
 }
-#page-animate.is-slide::after {
-  bottom: 0;
+#page-animate.is-slide-in::after {
+  top: 0;
 }
